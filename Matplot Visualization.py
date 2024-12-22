@@ -9,17 +9,17 @@ netflix_df = pd.read_csv(file_path)
 # Set the plot style
 sns.set(style="whitegrid")
 
-# Visualization 1: Count of content type
+# Count of content type
 content_type = netflix_df['type'].value_counts()
 plt.figure(figsize=(8, 6))
 sns.barplot(x=content_type.index, y=content_type.values, palette="viridis", errorbar=None, hue=content_type.index, dodge=False)
 plt.title("Count of Movies vs TV Shows")
 plt.xlabel("Content Type")
 plt.ylabel("Count")
-plt.legend([], [], frameon=False)  # Disabling the legend
+plt.legend([], [], frameon=False) 
 plt.show()
 
-# Visualization 2: Top 10 Genres
+# Top 10 Genres
 netflix_df['listed_in'] = netflix_df['listed_in'].fillna('')
 top_genres = netflix_df['listed_in'].str.split(',').explode().str.strip().value_counts().head(10)
 plt.figure(figsize=(10, 8))
@@ -30,7 +30,7 @@ plt.ylabel("Genre")
 plt.legend([], [], frameon=False)
 plt.show()
 
-# Visualization 3: Distribution of Ratings
+# Distribution of Ratings
 ratings = netflix_df['rating'].value_counts()
 plt.figure(figsize=(12, 6))
 sns.barplot(x=ratings.index, y=ratings.values, palette="coolwarm", errorbar=None, hue=ratings.index, dodge=False)
@@ -40,7 +40,7 @@ plt.ylabel("Count")
 plt.legend([], [], frameon=False)
 plt.show()
 
-# Visualization 4: Content added over time
+# Content added over time
 netflix_df['date_added'] = pd.to_datetime(netflix_df['date_added'], errors='coerce')
 added_by_year = netflix_df['date_added'].dt.year.value_counts().sort_index()
 plt.figure(figsize=(12, 6))
@@ -50,7 +50,7 @@ plt.xlabel("Year")
 plt.ylabel("Count")
 plt.show()
 
-# Visualization 5: Top 10 Countries producing content
+# Top 10 Countries producing content
 top_countries = netflix_df['country'].value_counts().head(10)
 plt.figure(figsize=(12, 6))
 sns.barplot(x=top_countries.values, y=top_countries.index, palette="magma", errorbar=None, hue=top_countries.index, dodge=False)
@@ -60,7 +60,7 @@ plt.ylabel("Country")
 plt.legend([], [], frameon=False)
 plt.show()
 
-# Visualization 6: Movie Duration Distribution
+# Movie Duration Distribution
 netflix_df['duration'] = netflix_df['duration'].fillna('0')
 movie_duration = netflix_df[netflix_df['type'] == 'Movie']['duration'].str.extract('(\d+)').astype(float)
 plt.figure(figsize=(12, 6))
@@ -70,7 +70,7 @@ plt.xlabel("Duration (Minutes)")
 plt.ylabel("Frequency")
 plt.show()
 
-# Visualization 7: Content count by release year
+# Content count by release year
 release_year_counts = netflix_df['release_year'].value_counts().sort_index()
 plt.figure(figsize=(12, 6))
 release_year_counts.plot(kind='line', color='green', marker='o')
@@ -80,7 +80,7 @@ plt.ylabel("Count")
 plt.grid(True)
 plt.show()
 
-# Visualization 8: TV Shows Duration Distribution
+# TV Shows Duration Distribution
 tv_duration = netflix_df[netflix_df['type'] == 'TV Show']['duration'].str.extract('(\d+)').astype(float)
 plt.figure(figsize=(12, 6))
 plt.hist(tv_duration[0], bins=20, color='orange', edgecolor='black')
