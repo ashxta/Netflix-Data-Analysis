@@ -9,11 +9,11 @@ This project analyzes Netflix's dataset to uncover insights about content trends
 The analysis leverages Python (Pandas, Matplotlib, Seaborn), Power BI and SQL to extract meaningful insights and visualize data effectively.
 
 🚀 Key Objectives
-Understand content distribution by type (Movies vs. TV Shows).
-Identify top genres and trends over time.
-Analyze ratings distribution and regional contributions.
-Explore content duration trends for both movies and TV shows.
-Visualize year-wise content additions on Netflix.
+  Understand content distribution by type (Movies vs. TV Shows).
+  Identify top genres and trends over time.
+  Analyze ratings distribution and regional contributions.
+  Explore content duration trends for both movies and TV shows.
+  Visualize year-wise content additions on Netflix.
 
 🛠️ Technologies Used
 Python: Data processing and visualization
