@@ -1,7 +1,7 @@
 🎬 Netflix Data Analysis
 ![Netflix Power BI](https://github.com/user-attachments/assets/0d8aec70-65c7-415f-b3e9-ec3846a2f12e)
 
-🏙️ Business Problem
+🏙️ Business Problem - 
 Netflix has a vast library of content, with a dataset containing extensive information about its shows and movies. Managing and analyzing such a large dataset is challenging, especially when trying to extract meaningful insights regarding audience preferences, content trends, and overall platform performance. Without a scalable and efficient analytics framework, Netflix faces difficulty in making data-driven decisions to optimize content delivery, improve user satisfaction, and identify areas for growth. This project aims to provide a robust and scalable solution to analyze Netflix’s dataset and uncover actionable insights to support decision-making.
 
 📊 Project Overview - 
